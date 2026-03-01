@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { FeatureCard } from "@/components/marketing/feature-card";
 import { TestimonialMarquee } from "@/components/marketing/marquee";
 import StepItem from "@/components/marketing/step-item";
+import { FeatureBadge } from "@/components/marketing/feature-badge";
 
 import { features, steps, testimonials } from "@/data/landing";
-import { FeatureBadge } from "@/components/marketing/feature-badge";
 
 export default function Home() {
   return (
@@ -29,10 +29,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center items-center gap-8 pointer-events-auto relative z-[999]">
-              <Button className="text-lg h-14 rounded-xl font-medium py-4 px-10 bg-btn-gradient cursor-pointer">
+              <Button className="text-lg h-14 rounded-xl font-medium py-4 px-10 bg-btn-gradient cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-xl active:shadow-md shadow-lg">
                 Get Started
               </Button>
-              <Button className="text-lg h-14 rounded-xl font-medium py-4 px-10 hover:bg-transparent border bg-transparent text-[#08186A] border-2 border-[#08186A] cursor-pointer">
+              <Button className="text-lg h-14 rounded-xl font-medium py-4 px-10 hover:bg-transparent border bg-transparent text-[#08186A] border-2 border-[#08186A] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg active:shadow-md">
                 Watch Us
               </Button>
             </div>
@@ -79,15 +79,27 @@ export default function Home() {
             </h2>
             <div className="flex items-center gap-20 w-full">
               <div className="flex-1">
-                {steps.map((step, index) => (
-                  <div key={step.title}>
-                    <StepItem {...step} />
-                    {index < steps.length - 1 && (
-                      <div className="h-px w-full bg-[#D5DBFA] my-8" />
-                    )}
-                  </div>
-                ))}
-              </div>
+  {steps.map((step, index) => (
+    <div
+      key={step.title}
+      className={`
+        transition-all duration-500 ease-out group
+      `}
+      style={{ transitionDelay: `${index * 120}ms` }}  // stagger appearance preserved
+    >
+      <StepItem {...step} />
+      {index < steps.length - 1 && (
+        <div 
+          className="
+            h-px w-full bg-[#D5DBFA] my-8 
+            transition-all duration-500 
+            group-hover:bg-[#08186A]/40
+          " 
+        />
+      )}
+    </div>
+  ))}
+</div>
               <div className="bg-[#060609] w-[610px] h-[607px] rounded-3xl relative">
                 <div className="absolute top-6 left-8 flex items-center gap-2">
                   <div className="rounded-full w-4 h-4 bg-[#FF5A52]" />

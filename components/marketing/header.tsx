@@ -22,7 +22,7 @@ export function Header() {
     <header
       className={cn(
         "fixed left-1/2 -translate-x-1/2 z-50 w-full transition-all duration-700 ease-out",
-        scrolled ? "top-2" : "top-0"
+        scrolled ? "top-2" : "top-0",
       )}
     >
       <nav
@@ -31,7 +31,7 @@ export function Header() {
           "flex items-center justify-between rounded-2xl py-5 transition-all duration-700 ease-out",
           scrolled
             ? "max-w-[85%] bg-white/80 backdrop-blur shadow-lg px-4 mx-auto"
-            : "container mx-auto bg-transparent px-0"
+            : "container mx-auto bg-transparent px-0",
         )}
       >
         <Link href="/" aria-label="Homepage">
@@ -49,7 +49,7 @@ export function Header() {
             <li key={item}>
               <Link
                 href={`#${item.toLowerCase()}`}
-                className="text-lg font-medium text-[#717171] hover:text-black transition-colors duration-300"
+                className="text-lg font-medium text-[#717171] hover:text-black transition-colors duration-300 hover:scale-105 active:scale-95 inline-block"
               >
                 {item}
               </Link>
@@ -58,7 +58,8 @@ export function Header() {
         </ul>
 
         <Link href="/contact">
-          <Button className="h-11 rounded-xl font-medium px-8 bg-btn-gradient cursor-pointer">
+          <Button
+            className="h-11 rounded-xl font-medium px-8 bg-btn-gradient cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg" >
             Contact Us
           </Button>
         </Link>
