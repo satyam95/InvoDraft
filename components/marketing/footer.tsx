@@ -26,7 +26,7 @@ export function Footer() {
 
               <Link href="/signup">
                 <Button
-                  className="text-lg h-14 rounded-xl font-medium py-4 px-10 bg-btn-gradient gap-4"
+                  className="text-lg h-14 rounded-xl font-medium py-4 px-10 bg-btn-gradient gap-4 cursor-pointer"
                   aria-label="Get started with our platform"
                 >
                   Get Started
@@ -72,7 +72,7 @@ export function Footer() {
 
                   <Button
                     type="submit"
-                    className="text-sm leading-[20px] h-11 rounded-xl font-medium py-3 px-8 bg-btn-gradient"
+                    className="text-sm leading-[20px] h-11 rounded-xl font-medium py-3 px-8 bg-btn-gradient cursor-pointer"
                   >
                     Subscribe
                   </Button>

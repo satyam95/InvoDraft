@@ -133,3 +133,9 @@ background: radial-gradient(circle at top right,rgba(151,165,242,0.4) 0%,rgba(25
 .bg-btn-gradient {
   background: linear-gradient(90deg, #415BE7 0%, #08186A 100%)
 }
+
+.text-gradient{
+  background: linear-gradient(90deg, #08186A 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}

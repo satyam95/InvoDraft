@@ -7,6 +7,7 @@ import { TestimonialMarquee } from "@/components/marketing/marquee";
 import StepItem from "@/components/marketing/step-item";
 
 import { features, steps, testimonials } from "@/data/landing";
+import { FeatureBadge } from "@/components/marketing/feature-badge";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
             <div className="space-y-6">
               <h1 className="text-[56px] leading-[84px] text-center font-semibold text-[#060609]">
                 Expert Planning, Smart Investing, Secure Management -
-                <span className="bg-[linear-gradient(90deg,#08186A_100%)] bg-clip-text text-transparent italic">
+                <span className="text-gradient italic">
                   All in one Platform
                 </span>
               </h1>
@@ -52,12 +53,7 @@ export default function Home() {
       <section>
         <div className="container mx-auto pt-20 pb-10">
           <div className="flex flex-col items-center gap-6">
-            <div className="py-2 px-4 flex items-center gap-3 border rounded-full border-2 border-[#E3E6FB]">
-              <div className="bg-[linear-gradient(90deg,#08186A_100%)] h-2.5 w-2.5 rounded-full" />
-              <div className="text-lg font-semibold bg-[linear-gradient(90deg,#08186A_100%)] bg-clip-text text-transparent">
-                Features Overview
-              </div>
-            </div>
+            <FeatureBadge text="Features Overview" showCircle />
             <h2 className="text-[#171717] font-semibold leading-[62px] text-4xl">
               Powerful Features at Your Fingertips
             </h2>
@@ -77,11 +73,7 @@ export default function Home() {
       <section>
         <div className="container mx-auto py-10">
           <div className="flex flex-col items-center gap-6">
-            <div className="py-2 px-4 flex items-center gap-3 border rounded-full border-2 border-[#E3E6FB]">
-              <div className="text-lg font-semibold bg-[linear-gradient(90deg,#08186A_100%)] bg-clip-text text-transparent">
-                How it Works
-              </div>
-            </div>
+            <FeatureBadge text="How it Works" />
             <h2 className="text-[#171717] font-semibold leading-[62px] text-4xl">
               Your Path to Financial Success
             </h2>
@@ -97,10 +89,10 @@ export default function Home() {
                 ))}
               </div>
               <div className="bg-[#060609] w-[610px] h-[607px] rounded-3xl relative">
-                <div className="absolute top-6 left-8 flex items-center gap-3">
-                  <div className="rounded-full w-5 h-5 bg-[#FF5A52]" />
-                  <div className="rounded-full w-5 h-5 bg-[#E6C02A]" />
-                  <div className="rounded-full w-5 h-5 bg-[#53C22B]" />
+                <div className="absolute top-6 left-8 flex items-center gap-2">
+                  <div className="rounded-full w-4 h-4 bg-[#FF5A52]" />
+                  <div className="rounded-full w-4 h-4 bg-[#E6C02A]" />
+                  <div className="rounded-full w-4 h-4 bg-[#53C22B]" />
                 </div>
               </div>
             </div>
@@ -110,11 +102,7 @@ export default function Home() {
       <section>
         <div className="container mx-auto pb-20 pt-10">
           <div className="flex flex-col items-center gap-6">
-            <div className="py-2 px-4 flex items-center gap-3 border rounded-full border-2 border-[#E3E6FB]">
-              <div className="text-lg font-semibold bg-[linear-gradient(90deg,#08186A_100%)] bg-clip-text text-transparent">
-                Testimonial
-              </div>
-            </div>
+            <FeatureBadge text="Testimonial" />
             <h2 className="text-[#171717] font-semibold leading-[62px] text-4xl">
               Real Stories, Real Success
             </h2>

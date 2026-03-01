@@ -58,7 +58,7 @@ export function Header() {
         </ul>
 
         <Link href="/contact">
-          <Button className="h-11 rounded-xl font-medium px-8 bg-btn-gradient">
+          <Button className="h-11 rounded-xl font-medium px-8 bg-btn-gradient cursor-pointer">
             Contact Us
           </Button>
         </Link>

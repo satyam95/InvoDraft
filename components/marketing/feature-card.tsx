@@ -26,7 +26,7 @@ export function FeatureCard({ icon, title, description }: Props) {
           </div>
           <Link
             href="#"
-            className="text-lg font-semibold bg-[linear-gradient(90deg,#08186A_100%)] bg-clip-text text-transparent"
+            className="text-lg font-semibold text-gradient"
           >
             Learn More
           </Link>
